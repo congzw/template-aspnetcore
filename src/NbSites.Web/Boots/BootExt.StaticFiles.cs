@@ -23,9 +23,9 @@ namespace NbSites.Web.Boots
                 }
             });
 
-            ////list static files
-            //app.UseDirectoryBrowser();
-            
+            //list static files
+            app.UseDirectoryBrowser();
+
             var rootPath = hostingEnvironment.ContentRootPath;
             var publicFiles = Directory.GetFiles(rootPath, "public_this_folder.txt", SearchOption.AllDirectories);
             foreach (var publicFile in publicFiles)
